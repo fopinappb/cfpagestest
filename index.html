@@ -1,1 +1,12 @@
-changed
+<html>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function(){
+                let searchParams = new URLSearchParams(window.location.search);
+                let param = searchParams.get('injectme');
+                $('body').html('Hello, ' + param + '! Testing CF WAF?');
+            })
+        </script>
+    </body>
+</html>
